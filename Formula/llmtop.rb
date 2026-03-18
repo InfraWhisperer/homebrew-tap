@@ -5,21 +5,21 @@
 class Llmtop < Formula
   desc "htop for your LLM inference cluster — real-time dashboard for vLLM, SGLang, LMCache, NIM with GPU monitoring"
   homepage "https://github.com/InfraWhisperer/llmtop"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.1.0/llmtop_0.1.0_darwin_amd64.tar.gz"
-      sha256 "951b52f78bb71fd8f991b9aea5a8cf2105fdc3c19cf12f32cadd6dc3bc9a68a8"
+      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.2.0/llmtop_0.2.0_darwin_amd64.tar.gz"
+      sha256 "af409ddc37d7fc25c727cceafa61025976c2023f87fb1f0e101f111dc99b1e64"
 
       define_method(:install) do
         bin.install "llmtop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.1.0/llmtop_0.1.0_darwin_arm64.tar.gz"
-      sha256 "5d890e1dce651e729d6d89f9278990102dd5d4e2566b20b2add9631d0a288719"
+      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.2.0/llmtop_0.2.0_darwin_arm64.tar.gz"
+      sha256 "3933af4e72acfd477bcef8b6abdd3fb94561e56ac386a1207ac4e07433d79ab1"
 
       define_method(:install) do
         bin.install "llmtop"
@@ -29,15 +29,15 @@ class Llmtop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.1.0/llmtop_0.1.0_linux_amd64.tar.gz"
-      sha256 "4f5d8b48307e178067f13b1123d5f3cf82ab90b5fb28131e275ea523d1cb13a2"
+      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.2.0/llmtop_0.2.0_linux_amd64.tar.gz"
+      sha256 "2f2e043d5aa33a923ab7ce2921a92e9780dc1ec2241efcc20462cf5c673e8ec7"
       define_method(:install) do
         bin.install "llmtop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.1.0/llmtop_0.1.0_linux_arm64.tar.gz"
-      sha256 "37f8371c31d654fd392ef9c4af82125c0e322a9aa4c3e7d73ad18ce611984f6f"
+      url "https://github.com/InfraWhisperer/llmtop/releases/download/v0.2.0/llmtop_0.2.0_linux_arm64.tar.gz"
+      sha256 "6c2560827e9a1a810d472ae21b5a41b450e93e20ba46d2657403da873090c4ab"
       define_method(:install) do
         bin.install "llmtop"
       end
